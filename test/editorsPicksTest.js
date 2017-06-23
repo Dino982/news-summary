@@ -1,0 +1,10 @@
+
+var data = `{"response":{"status":"ok","userTier":"developer","total":1,"editorsPicks":[{"id":"uk-news/2017/jun/23/grenfell-tower-fire-police-considering-manslaughter-charges","type":"article","sectionId":"uk-news","sectionName":"UK news","webPublicationDate":"2017-06-23T10:11:53Z","webTitle":"Grenfell Tower fire: police consider manslaughter charges","webUrl":"https://www.theguardian.com/uk-news/2017/jun/23/grenfell-tower-fire-police-considering-manslaughter-charges","apiUrl":"https://content.guardianapis.com/uk-news/2017/jun/23/grenfell-tower-fire-police-considering-manslaughter-charges","isHosted":false},{"id":"politics/2017/jun/23/eu-expats-condemn-theresa-may-pathetic-offer-on-brexit-rights","type":"article","sectionId":"politics","sectionName":"Politics","webPublicationDate":"2017-06-23T10:27:03Z","webTitle":"EU expats condemn Theresa May's 'pathetic' offer on Brexit rights","webUrl":"https://www.theguardian.com/politics/2017/jun/23/eu-expats-condemn-theresa-may-pathetic-offer-on-brexit-rights","apiUrl":"https://content.guardianapis.com/politics/2017/jun/23/eu-expats-condemn-theresa-may-pathetic-offer-on-brexit-rights","isHosted":false},{"id":"world/2017/jun/23/mps-argue-northern-irish-women-right-to-abortion-nhs","type":"article","sectionId":"world","sectionName":"World news","webPublicationDate":"2017-06-23T07:22:06Z","webTitle":"MPs to argue Northern Irish women have right to abortion on NHS","webUrl":"https://www.theguardian.com/world/2017/jun/23/mps-argue-northern-irish-women-right-to-abortion-nhs","apiUrl":"https://content.guardianapis.com/world/2017/jun/23/mps-argue-northern-irish-women-right-to-abortion-nhs","isHosted":false}]}}`;
+
+
+function testEditorsPick(){
+
+  assert.isTrue(convertData(data) === "<ul><li><div>Grenfell Tower fire: police consider manslaughter charges</div></li><li><div>EU expats condemn Theresa May's 'pathetic' offer on Brexit rights</div></li><li><div>MPs to argue Northern Irish women have right to abortion on NHS</div></li></ul>")
+}
+
+testEditorsPick();
